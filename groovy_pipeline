@@ -1,16 +1,16 @@
 pipeline
 {
-    agent any //run stages on any avaiabale executor
+    agent any 
 
-    stages    //it contains sll stgaes
+    stages    
     {
-        stge('stge-1')
-        {steps       // how to perfrom stage-1
+        stage('stge-1')
+        {steps       
           {
               sh 'echo Hi, this is Jenkins'
           }
         }  
-        stge('stge-2')
+        stage('stge-2')
         {steps
          {
              sh 'echo Hi, this is STGE-2'
