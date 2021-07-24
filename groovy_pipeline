@@ -9,7 +9,7 @@ pipeline
      {
         agent 
         { ('master')
-        { steps       
+         steps       
           {
               sh 'echo Hi, this is Jenkins'
               ksh 'echo Hi, this is ksh file'
@@ -17,7 +17,7 @@ pipeline
               
           }
          }  
-        }
+        
        }
         
      }
