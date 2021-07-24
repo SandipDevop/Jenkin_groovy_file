@@ -1,6 +1,6 @@
 pipeline
 {
-    agent any 
+    agent none 
 
     stages    
     {
@@ -8,6 +8,15 @@ pipeline
         { steps       
           {
               sh 'echo Hi, this is Jenkins'
+              ksh 'echo Hi, this is ksh file'
+              
+          }
+        }  
+        stage ('approval from QA')
+        { steps       
+          {
+              input ('Please approve testing')
+              
           }
         }  
         stage ('stge-2')
