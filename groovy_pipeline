@@ -1,0 +1,21 @@
+pipeline
+{
+    agent any //run stages on any avaiabale executor
+
+    stages    //it contains sll stgaes
+    {
+        stge('stge-1')
+        {steps       // how to perfrom stage-1
+          {
+              sh 'echo Hi, this is Jenkins'
+          }
+        }  
+        stge('stge-2')
+        {steps
+         {
+             sh 'echo Hi, this is STGE-2'
+         }
+
+        } 
+    }
+}
