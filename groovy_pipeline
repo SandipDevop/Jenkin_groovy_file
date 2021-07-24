@@ -5,27 +5,20 @@ pipeline
     stages    
     {
      
-        stage ('stge-1')
+     stage ('stge-1')
+     {
         agent 
-       { ('master')
+        { ('master')
         { steps       
           {
               sh 'echo Hi, this is Jenkins'
               ksh 'echo Hi, this is ksh file'
-              
-          }
-        }  }
-        stage ('approval from QA')
-        {  
-        agent 
-        { ('master')
-          steps       
-          {
               input ('Please approve testing')
               
           }
-        } 
+         }  
         }
+       }
         
      }
    
