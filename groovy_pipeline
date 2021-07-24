@@ -4,14 +4,14 @@ pipeline
 
     stages    
     {
-        stage('stge-1')
-        {steps       
+        stage ('stge-1')
+        { steps       
           {
               sh 'echo Hi, this is Jenkins'
           }
         }  
-        stage('stge-2')
-        {steps
+        stage ('stge-2')
+        { steps
          {
              sh 'echo Hi, this is STGE-2'
          }
