@@ -1,14 +1,12 @@
 pipeline
 {
-    agent none 
+    agent any 
    
     stages    
     {
      
      stage ('stge-1')
      {
-        agent any
-        {  
           
          steps       
           {
@@ -17,9 +15,7 @@ pipeline
               input ('Please approve testing')
               
           }
-         }  
-        
-       }
+         } 
         
      }
    
