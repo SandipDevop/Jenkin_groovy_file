@@ -1,10 +1,11 @@
 pipeline
 {
     agent none 
-    agent 
-    { ('master')
+   
     stages    
     {
+     agent 
+    { ('master')
         stage ('stge-1')
         { steps       
           {
@@ -12,21 +13,19 @@ pipeline
               ksh 'echo Hi, this is ksh file'
               
           }
-        }  
+        }  }
         stage ('approval from QA')
-        { steps       
+        {  
+        agent 
+        { ('master')
+          steps       
           {
               input ('Please approve testing')
               
           }
-        }  
-        stage ('stge-2')
-        { steps
-         {
-             sh 'echo Hi, this is STGE-2'
-         }
-
         } 
+        }
+        
      }
    }
 }
