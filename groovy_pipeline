@@ -1,19 +1,21 @@
 pipeline
 {
-    agent none 
+    agent any 
    
     stages    
     {
      
      stage ('stge-1')
      {
-          
+       agent 
+       { ('master')
          steps       
           {
               sh 'echo Hi, this is Jenkins'
               ksh 'echo Hi, this is ksh file'
               input ('Please approve testing')
               
+          }
           }
          } 
         
